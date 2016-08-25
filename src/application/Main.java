@@ -58,6 +58,9 @@ public class Main extends Application {
 			Button next = new Button("Next");
 			next.setOnAction(new AddButtonClicked());
 
+			Button exit = new Button("Exit");
+			exit.setOnAction(new AddButtonClicked());
+
 			mainPane.add(storeCodeL, 0, 0);
 			mainPane.add(cityL, 0, 1);
 			mainPane.add(stateL, 0, 2);
@@ -65,7 +68,8 @@ public class Main extends Application {
 			mainPane.add(storeCodeTF, 1, 0);
 			mainPane.add(cityTF, 1, 1);
 			mainPane.add(stateTF, 1, 2);
-			mainPane.add(next, 2, 3);
+			mainPane.add(next, 1, 3);
+			mainPane.add(exit, 2, 3);
 
 			root.setTop(mainPane);
 
@@ -104,7 +108,11 @@ public class Main extends Application {
 	private static class AddButtonClicked implements EventHandler<ActionEvent> {
 		@Override
 		public void handle(ActionEvent event) {
-			System.out.println("My Very Own Private Button Handler");
+			Button button = (Button) event.getSource();
+			if (button.getText() == "Next")
+				System.out.println("This is the Next Button.");
+			if (button.getText() == "Exit")
+				System.exit(0);
 		}
 	}
 
