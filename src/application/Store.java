@@ -40,7 +40,7 @@ public class Store {
 
 	@Override
 	public String toString() {
-		String temp = this.getLocationCode() + " is located in " + this.getCity() + ", " + this.getState();
+		String temp = this.getLocationCode() + " is located in " + this.getCity() + ", " + this.getState() + ".";
 		return temp;
 	}
 
