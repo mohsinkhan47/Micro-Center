@@ -121,11 +121,17 @@ public class Main extends Application {
 			Button button = (Button) event.getSource();
 
 			if (button.getText() == "Next") {
-				store = new Store(Integer.parseInt(storeCodeTF.getText()), cityTF.getText(), stateTF.getText());
-				System.out.println(store.toString());
-				mainPane.getChildren().clear();
-				// primaryStage.setFullScreen(true);
+				if (Integer.parseInt(storeCodeTF.getText()) > 0) {
+					store = new Store(Integer.parseInt(storeCodeTF.getText()), cityTF.getText(), stateTF.getText());
+					System.out.println(store.toString());
+					mainPane.getChildren().clear();
 					tempStage.setMaximized(true);
+					start1(tempStage);
+				} else {
+					storeCodeTF.setText("Wrong Input");
+					cityTF.setText("Wrong Input");
+					stateTF.setText("Wrong Input");
+				}
 			}
 			if (button.getText() == "Open")
 				System.out.println("Open Button");
