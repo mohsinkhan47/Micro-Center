@@ -111,6 +111,27 @@ public class Main extends Application {
 		Label unitL = new Label("Unit");
 		Label techNameL = new Label("Tech");
 		Label casherNotesL = new Label("Casher Notes");
+
+		// The layout of the scene
+		mainPane = new BorderPane();
+		topMainPane = new BorderPane();
+		mainScene = new Scene(mainPane, primaryStage.getMaxWidth(), primaryStage.getMaxHeight());
+		primaryStage.setScene(mainScene);
+
+		/**
+		 * Start of Main GUI
+		 */
+		Label sameDayL = new Label("				Same Days");
+		topMainPane.setLeft(sameDayL);
+
+		mainPane.setTop(topMainPane);
+
+		/**
+		 * End of Main GUI
+		 */
+
+		// primaryStage.toFront();
+		primaryStage.setMaximized(true);
 	}
 
 	public class AddButtonClicked implements EventHandler<ActionEvent> {
