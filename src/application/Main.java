@@ -32,7 +32,7 @@ public class Main extends Application {
 			// The layout of the scene
 			root = new BorderPane();
 
-			intro = new Scene(root, 540, 180);
+			intro = new Scene(root, 580, 180);
 			intro.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
 			// Adding the scene to the stage.
@@ -51,15 +51,15 @@ public class Main extends Application {
 
 			storeCodeL = new Label("What is the store code? (Ex. 085)");
 			storeCodeTF = new TextField();
-			storeCodeTF.setMaxWidth(100);
+			storeCodeTF.setMaxWidth(125);
 
 			cityL = new Label("In what city is the store located in? (Ex. Rockville)");
 			cityTF = new TextField();
-			cityTF.setMaxWidth(100);
+			cityTF.setMaxWidth(125);
 
 			stateL = new Label("In what state is the store located in? (Ex. MD)");
 			stateTF = new TextField();
-			stateTF.setMaxWidth(100);
+			stateTF.setMaxWidth(125);
 
 			Button next = new Button("Next");
 			next.setOnAction(new AddButtonClicked());
