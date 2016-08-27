@@ -19,6 +19,7 @@ public class Main extends Application {
 	Label storeCodeL, cityL, stateL;
 
 	Scene intro;
+	Stage tempStage;
 	BorderPane root;
 	GridPane mainPane;
 
@@ -104,6 +105,7 @@ public class Main extends Application {
 			// root.setTop(sameDayL);
 
 			primaryStage.show();
+			tempStage = primaryStage;
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -122,6 +124,7 @@ public class Main extends Application {
 				System.out.println(store.toString());
 				mainPane.getChildren().clear();
 				// primaryStage.setFullScreen(true);
+					tempStage.setMaximized(true);
 			}
 			if (button.getText() == "Open")
 				System.out.println("Open Button");
