@@ -83,27 +83,6 @@ public class Main extends Application {
 			 * End of Intro GUI.
 			 */
 
-			// Label sameDayL = new Label("Same Days");
-			// Label closesL = new Label("Closes");
-
-			// Label pcCheckInL = new Label("PC+ Check In");
-
-			// Label super6StoreL = new Label("Super 6 by Store");
-			// Label super6TechL = new Label("Super 6 by Techs");
-			// Label techCompletesL = new Label("Tech Completes");
-			// Label daysOnBenchL = new Label("Days on Bench");
-
-			// Label customerServiceCheckInL = new Label("Customer Service Check
-			// In");
-			// Label rpNumberL = new Label("RP");
-			// Label customerNameL = new Label("Customer's Name");
-			// Label unitL = new Label("Unit");
-			// Label techNameL = new Label("Tech");
-			// Label casherNotesL = new Label("Casher Notes");
-
-			// Same Day Table
-			// root.setTop(sameDayL);
-
 			primaryStage.show();
 			tempStage = primaryStage;
 
@@ -111,6 +90,28 @@ public class Main extends Application {
 			e.printStackTrace();
 			System.out.println("Error has occured in the start method");
 		}
+	}
+
+	public void start1(Stage primaryStage) {
+		primaryStage.setTitle("Daily Numbers v0.2");
+
+		Label sameDayL = new Label("Same Days");
+		Label closesL = new Label("Closes");
+
+		Label pcCheckInL = new Label("PC+ Check In");
+
+		Label super6StoreL = new Label("Super 6 by Store");
+		Label super6TechL = new Label("Super 6 by Techs");
+		Label techCompletesL = new Label("Tech Completes");
+		Label daysOnBenchL = new Label("Days on Bench");
+
+		Label customerServiceCheckInL = new Label("Customer Service Check In");
+
+		Label rpNumberL = new Label("RP");
+		Label customerNameL = new Label("Customer's Name");
+		Label unitL = new Label("Unit");
+		Label techNameL = new Label("Tech");
+		Label casherNotesL = new Label("Casher Notes");
 	}
 
 	public class AddButtonClicked implements EventHandler<ActionEvent> {
