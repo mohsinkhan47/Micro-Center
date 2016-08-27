@@ -18,10 +18,10 @@ public class Main extends Application {
 	TextField storeCodeTF, cityTF, stateTF;
 	Label storeCodeL, cityL, stateL;
 
-	Scene intro;
+	Scene introScene, mainScene;
 	Stage tempStage;
-	BorderPane root;
-	GridPane mainPane;
+	BorderPane root, mainPane, topMainPane;
+	GridPane introPane;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -32,22 +32,22 @@ public class Main extends Application {
 			// The layout of the scene
 			root = new BorderPane();
 
-			intro = new Scene(root, 580, 180);
-			intro.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			introScene = new Scene(root, 580, 180);
+			introScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
 			// Adding the scene to the stage.
 			// Root goes on the Scene, and the scene is added to the Stage where
 			// the user will see the GUI.
-			primaryStage.setScene(intro);
+			primaryStage.setScene(introScene);
 
 			/**
-			 * Intro GUI.
+			 * Start of Intro GUI.
 			 */
 
-			mainPane = new GridPane();
-			mainPane.setPadding(new Insets(10, 10, 10, 10));
-			mainPane.setVgap(10);
-			mainPane.setHgap(20);
+			introPane = new GridPane();
+			introPane.setPadding(new Insets(10, 10, 10, 10));
+			introPane.setVgap(10);
+			introPane.setHgap(20);
 
 			storeCodeL = new Label("What is the store code? (Ex. 085)");
 			storeCodeTF = new TextField();
@@ -67,17 +67,17 @@ public class Main extends Application {
 			Button open = new Button("Open");
 			open.setOnAction(new AddButtonClicked());
 
-			mainPane.add(storeCodeL, 0, 0);
-			mainPane.add(cityL, 0, 1);
-			mainPane.add(stateL, 0, 2);
+			introPane.add(storeCodeL, 0, 0);
+			introPane.add(cityL, 0, 1);
+			introPane.add(stateL, 0, 2);
 
-			mainPane.add(storeCodeTF, 1, 0);
-			mainPane.add(cityTF, 1, 1);
-			mainPane.add(stateTF, 1, 2);
-			mainPane.add(next, 1, 3);
-			mainPane.add(open, 2, 3);
+			introPane.add(storeCodeTF, 1, 0);
+			introPane.add(cityTF, 1, 1);
+			introPane.add(stateTF, 1, 2);
+			introPane.add(next, 1, 3);
+			introPane.add(open, 2, 3);
 
-			root.setTop(mainPane);
+			root.setTop(introPane);
 
 			/**
 			 * End of Intro GUI.
@@ -95,7 +95,6 @@ public class Main extends Application {
 	public void start1(Stage primaryStage) {
 		primaryStage.setTitle("Daily Numbers v0.2");
 
-		Label sameDayL = new Label("Same Days");
 		Label closesL = new Label("Closes");
 
 		Label pcCheckInL = new Label("PC+ Check In");
