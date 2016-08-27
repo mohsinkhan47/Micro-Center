@@ -122,9 +122,7 @@ public class Main extends Application {
 			if (button.getText() == "Next") {
 				if (Integer.parseInt(storeCodeTF.getText()) > 0) {
 					store = new Store(Integer.parseInt(storeCodeTF.getText()), cityTF.getText(), stateTF.getText());
-					System.out.println(store.toString());
-					mainPane.getChildren().clear();
-					tempStage.setMaximized(true);
+					introPane.getChildren().clear();
 					start1(tempStage);
 				} else {
 					storeCodeTF.setText("Wrong Input");
